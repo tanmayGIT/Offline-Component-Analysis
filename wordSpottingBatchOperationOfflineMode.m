@@ -251,6 +251,8 @@ parfor Chk = 1:size(HoldConnecComMoreRefined,1)
     
     if((ComponentHghtWdth(Chk,1)<(4*avgHght))&&(ComponentHghtWdth(Chk,1)>(avgHght/4)))
         %         disp(Chk);
+        % here we get the component image, now we will caculate number of component present in word and only is is more than
+        % 4 then the component will be considered
         componentImg = beforeRLSA((HoldConnecComMoreRefined{Chk,1}(1,3)):(HoldConnecComMoreRefined{Chk,1}(4,3)),...
             (HoldConnecComMoreRefined{Chk,1}(1,4)-((startText-1))):(HoldConnecComMoreRefined{Chk,1}(4,4)-((startText-1))));
         
